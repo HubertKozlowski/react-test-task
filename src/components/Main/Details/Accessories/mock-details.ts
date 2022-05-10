@@ -71,6 +71,6 @@ export const ITEMS: AccessoryItem[] = [
     id: 12,
     category: "Other 3",
     title: "Lorem ipsum",
-    detail: "3%",
+    detail: "0%",
   },
 ];
