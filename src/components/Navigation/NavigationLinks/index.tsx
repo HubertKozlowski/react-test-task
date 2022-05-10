@@ -9,14 +9,17 @@ const LINKS: { path: string; description: string }[] = [
 ];
 
 export const NavigationLinks = (): JSX.Element => {
-  const { basePath } = useRouter();
+  const { asPath } = useRouter();
+  console.log(`🚀 ~ file: index.tsx ~ line 13 ~ asPath`, asPath);
 
   return (
     <div className="flex font-bold">
       {LINKS.map(({ path, description }, index) => {
         return (
           <span key={`nav-${index}`} className="mx-6 inline-block">
-            <Link href={`${basePath}${path}`}>{description}</Link>
+            <Link href={`${path}`} replace>
+              {description}
+            </Link>
           </span>
         );
       })}
