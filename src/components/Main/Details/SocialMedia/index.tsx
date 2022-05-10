@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomLink } from "../../../../shared";
+import { Redirect } from "../../../../shared";
 import { Accordion } from "../../../../shared/Accordion";
 import { IconWithText } from "../../../../shared/IconWithText";
 
@@ -7,11 +7,16 @@ const MEDIA: { id: number; path: string; icon: string; description: string }[] =
   [
     {
       id: 1,
-      path: "/",
+      path: "https://jestjs.io/",
       icon: "external.svg",
       description: "Lorem ipsum.com",
     },
-    { id: 2, path: "/", icon: "discord.svg", description: "@Lorem ipsum" },
+    {
+      id: 2,
+      path: "https://testing-library.com/",
+      icon: "discord.svg",
+      description: "@Lorem ipsum",
+    },
     {
       id: 3,
       path: "https://www.smashingmagazine.com/",
@@ -45,11 +50,11 @@ export const SocialMedia = (): JSX.Element => {
         <div className="my-8 grid grid-cols-2 gap-4">
           {MEDIA.map(({ id, path, icon, description }) => {
             return (
-              <CustomLink key={id} route={path}>
+              <Redirect key={id} route={path}>
                 <IconWithText iconName={icon} iconWidth={24} iconHeight={24}>
                   {description}
                 </IconWithText>
-              </CustomLink>
+              </Redirect>
             );
           })}
         </div>

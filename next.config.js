@@ -1,3 +1,5 @@
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -5,8 +7,8 @@ const nextConfig = {
     loader: "akamai",
     path: "",
   },
-  basePath: "/gh-pages",
-  assetPrefix: ".",
+  basePath: isProd ? "/gh-pages" : "",
+  assetPrefix: isProd ? "." : "",
 };
 
 module.exports = nextConfig;

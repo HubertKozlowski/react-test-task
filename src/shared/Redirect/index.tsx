@@ -5,9 +5,10 @@ interface LinkProps {
   route: string;
 }
 
-export const CustomLink = ({ children, route }: LinkProps): JSX.Element => {
+export const Redirect = ({ children, route }: LinkProps): JSX.Element => {
   return (
     <a
+      target="_blank"
       rel="nofollow noopener noreferrer"
       href={route}
       className=" visited:text-custom-red"
