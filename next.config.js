@@ -6,7 +6,7 @@ const nextConfig = {
     path: "",
   },
   basePath: "/gh-pages",
-  assetPrefix: "/gh-pages",
+  assetPrefix: ".",
 };
 
 module.exports = nextConfig;
