@@ -1,14 +1,10 @@
-const withImages = require("next-images");
-
-module.exports = withImages({
-  basePath: "/nextjs-pages",
-  assetPrefix: "/nextjs-pages",
-  dynamicAssetPrefix: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   images: {
     loader: "akamai",
     path: "",
   },
-  webpack(config, options) {
-    return config;
-  },
-});
+};
+
+module.exports = nextConfig;
