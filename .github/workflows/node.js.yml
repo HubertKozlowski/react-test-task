@@ -28,5 +28,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          BRANCH: main # The branch the action should deploy to.
+          GITHUB_TOKEN: ${{ secrets.TESTTASK }}
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
