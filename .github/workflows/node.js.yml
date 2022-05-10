@@ -6,6 +6,8 @@ name: GitHub Pages deploy
 on:
   push:
     branches: [main]
+permissions:
+  actions: write
 
 jobs:
   build:
